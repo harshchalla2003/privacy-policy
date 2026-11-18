@@ -294,8 +294,19 @@ tbody th { color: var(--ink); font-weight: 650; min-width: 170px; }
   body { font-size: 1rem; }
   .cards { grid-template-columns: minmax(0, 1fr); }
   .lede { font-size: 1.08rem; }
-  th, td { padding: 12px 14px; }
-  tbody th { min-width: 130px; }
+  /* Permissions table becomes stacked cards. */
+  .table-wrap { overflow: visible; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table, tbody, tr, tbody th, td { display: block; width: 100%; }
+  tr { padding: 16px 18px; border-bottom: 1px solid var(--edge); }
+  tbody tr:last-child { border-bottom: 0; }
+  tbody th, td { padding: 0; border: 0; min-width: 0; }
+  tbody th { margin-bottom: 10px; }
+  td { margin-top: 8px; }
+  td::before {
+    content: attr(data-label); display: block; margin-bottom: 2px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute);
+  }
 }
 
 @media print {

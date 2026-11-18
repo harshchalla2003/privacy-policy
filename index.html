@@ -149,17 +149,17 @@
 
       <section id="permissions" class="reveal">
         <h2>App permissions</h2>
-        <p>These are the permissions in Verdelle's Android package, including those added automatically by the WorkManager library.</p>
+        <p>These are the permissions in Verdelle's Android package that you may see, including those added automatically by the WorkManager library.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th scope="col">Permission</th><th scope="col">Why</th><th scope="col">Your choice</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Physical activity<br><code>ACTIVITY_RECOGNITION</code></th><td>Required by Android to read the hardware step counter.</td><td>Asked during the introduction. You can decline; your saved garden stays available.</td></tr>
-              <tr><th scope="row">Usage access<br><code>PACKAGE_USAGE_STATS</code></th><td>Digital Balance only: minutes per app category.</td><td>Off unless you turn it on in Android Settings. You can turn it off at any time.</td></tr>
-              <tr><th scope="row">Run at startup<br><code>RECEIVE_BOOT_COMPLETED</code></th><td>Lets WorkManager reschedule the hourly reading after a restart.</td><td>Granted at install.</td></tr>
-              <tr><th scope="row">Prevent sleep<br><code>WAKE_LOCK</code></th><td>Lets WorkManager finish a short background reading.</td><td>Granted at install.</td></tr>
-              <tr><th scope="row">View network connections<br><code>ACCESS_NETWORK_STATE</code></th><td>Added by WorkManager to check connectivity conditions. Verdelle uses none and this does not allow internet access.</td><td>Granted at install.</td></tr>
-              <tr><th scope="row">Foreground service<br><code>FOREGROUND_SERVICE</code></th><td>Added by WorkManager. Verdelle does not start foreground services.</td><td>Granted at install.</td></tr>
+              <tr><th scope="row">Physical activity<br><code>ACTIVITY_RECOGNITION</code></th><td data-label="Why">Required by Android to read the hardware step counter.</td><td data-label="Your choice">Asked during the introduction. You can decline; your saved garden stays available.</td></tr>
+              <tr><th scope="row">Usage access<br><code>PACKAGE_USAGE_STATS</code></th><td data-label="Why">Digital Balance only: minutes per app category.</td><td data-label="Your choice">Off unless you turn it on in Android Settings. You can turn it off at any time.</td></tr>
+              <tr><th scope="row">Run at startup<br><code>RECEIVE_BOOT_COMPLETED</code></th><td data-label="Why">Lets WorkManager reschedule the hourly reading after a restart.</td><td data-label="Your choice">Granted at install.</td></tr>
+              <tr><th scope="row">Prevent sleep<br><code>WAKE_LOCK</code></th><td data-label="Why">Lets WorkManager finish a short background reading.</td><td data-label="Your choice">Granted at install.</td></tr>
+              <tr><th scope="row">View network connections<br><code>ACCESS_NETWORK_STATE</code></th><td data-label="Why">Added by WorkManager to check connectivity conditions. Verdelle uses none and this does not allow internet access.</td><td data-label="Your choice">Granted at install.</td></tr>
+              <tr><th scope="row">Foreground service<br><code>FOREGROUND_SERVICE</code></th><td data-label="Why">Added by WorkManager. Verdelle does not start foreground services.</td><td data-label="Your choice">Granted at install.</td></tr>
             </tbody>
           </table>
         </div>
